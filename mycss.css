@@ -68,6 +68,12 @@
   font-size: 20px;
   cursor: pointer;
 }
+.boy {
+  width: 15%;
+  height: 15%;
+  z-index: 10;
+  transform:translate(275%,175%)
+}
 .reslut{
   color: yellow;
   /* border: 1px solid red; */

@@ -1,4 +1,4 @@
-let secretnumber= Math.floor(Math.random() * 100) + 1;
+let secretnumber= Math.floor(Math.random() * (100-1) + 1);
 let score=20;
 
 
@@ -20,8 +20,10 @@ document.querySelector('.check').addEventListener('click', function(){
         document.querySelector('.message').textContent= '정답입니다!';
         document.querySelector('.number').textContent=secretnumber;
 
+        document.querySelector('.boy').setAttribute("src","boy2.png")
         document.querySelector('.container').style.backgroundColor="#094699";
         document.querySelector('.box').textContent=guess;
+        
 
     // 숫자를 못맞출경우
     }else if(guess !==secretnumber){
@@ -38,7 +40,7 @@ document.querySelector('.check').addEventListener('click', function(){
 // again을 누를시 이벤트 발생
 document.querySelector('.retry').addEventListener('click',function(){
     score =20;
-    secretnumber=Math.trunc(Math.random()*20)+1;
+    secretnumber=Math.floor(Math.random() * (100-1) + 1);
     //횟수 리필
     document.querySelector('.message').textContent ='숫자 비교중....';
     //선언된 score = 20 출력
